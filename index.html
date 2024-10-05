@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פרומפטים של ChatGPT לכתיבת תסריטים</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Heebo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff; /* Light sky blue background */
+        }
+        h1, h2 {
+            color: #ff6b6b; /* Bright coral */
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .prompt-section {
+            background-color: #ffffff; /* White background for sections */
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #4ecdc4; /* Turquoise border */
+        }
+        .prompt-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .prompt-text {
+            background-color: #e7f9f8; /* Very light turquoise */
+            border-left: 4px solid #ff6b6b; /* Bright coral */
+            padding: 15px;
+            margin-bottom: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            direction: ltr;
+            text-align: left;
+            color: #333;
+        }
+        .copy-btn {
+            background-color: #feca57; /* Bright yellow */
+            color: #333;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            display: block;
+            margin: 0 auto;
+        }
+        .copy-btn:hover {
+            background-color: #ff9ff3; /* Light pink */
+            transform: scale(1.05);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .glow {
+            text-align: center;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff6b6b, 0 0 20px #ff6b6b;
+            }
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="glow">פרומפטים של ChatGPT לכתיבת תסריטים</h1>
+    
+    <div class="prompt-section fade-in">
+        <h2>יצירת הקשר</h2>
+        <div class="prompt-text">You are now the world's best screenwriter. I will ask you for creative feedback and ideas and you will provide me with clever and original cinematic material. ok?</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <div class="prompt-section fade-in">
+        <h2>פיתוח רעיונות</h2>
+        <div class="prompt-text">In one sentence, pitch a movie idea based on &lt;horror thriller about FBI agent looking for a missing kid in a haunted mansion&gt;. create a story based on &lt;the 3-act formula/the 12 steps hero journey formula&gt;. Give me 3 options.</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <div class="prompt-section fade-in">
+        <h2>מרעיון לתסריט</h2>
+        <div class="prompt-text">[Based on idea number &lt;&gt;/base on this idea &lt;write your idea&gt;] Let's create a &lt;short scene&gt; that will demonstrate &lt;the main character's backstory and motivation&gt;. Please write it in a scriptwriting format.</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <div class="prompt-section fade-in">
+        <h2>מתסריט לבימוי וטבלת שוטים</h2>
+        <div class="prompt-text">You are now the world's best Film Director and Set Designer. Based on this script please create shot lists in a five-column table format with the first column being the shot number, the second being the detailed visual description and lighting, the third being a camera angle/movement, the forth is the characters in the shot and the fifth is the dialogue.</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <div class="prompt-section fade-in">
+        <h2>מנטור לכתיבה ובימוי</h2>
+        <div class="prompt-text">You are now &lt;Director's Name&gt; and You are my creative collaborator and mentor. I will ask you questions, and based on your past experiences and body of work (and everything else you know about him) I want you to give me creative feedback. ok?</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <div class="prompt-section fade-in">
+        <h2>קונטקסט ופיתוח רעיונות לטיקטוק</h2>
+        <div class="prompt-text">You are now the world's best social media and tiktok copywriter. I will ask you for creative feedback and ideas and you will provide me with clever and original tiktok commercial shorts material. ok?
+
+In one sentence, pitch a short tiktok video that will serve as an amazing commercial for &lt;an ai filmmaking course&gt;. Give me 3 options.</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <div class="prompt-section fade-in">
+        <h2>קונטקסט ופיתוח רעיונות לקליפ</h2>
+        <div class="prompt-text">You are now the world's best music video director. I will ask you for creative feedback and ideas and you will provide me with clever and original clips an music videos material. ok?
+
+Based on this song lyrics: &lt;song lyrics&gt; pitch In one sentence, an amazing idea for &lt;a music video&gt;. Give me 3 options.</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <div class="prompt-section fade-in">
+        <h2>תבנית ליצירת קונטקסט</h2>
+        <div class="prompt-text">You are now the world's best &lt;profession&gt;. I will ask you for creative feedback and ideas and you will provide me with clever and original &lt;medium/genre&gt; material. ok?</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <div class="prompt-section fade-in">
+        <h2>תבנית לבקשת רעיונות</h2>
+        <div class="prompt-text">In one sentence, pitch a movie idea based on &lt;your idea and genre&gt;. create a story based on &lt;story formula&gt;. Give me 3 options.</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <div class="prompt-section fade-in">
+        <h2>תבנית לבקשת עיצוב קונספט</h2>
+        <div class="prompt-text">You are now &lt;director's name/profession&gt;. Based on this &lt;script/idea&gt; please invent a visual style &lt;add details about what you are aiming for here&gt;.</div>
+        <button class="copy-btn" onclick="copyPrompt(this)">העתק פרומפט</button>
+    </div>
+
+    <script>
+        function copyPrompt(button) {
+            const promptText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'הועתק!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.prompt-section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('fade-in');
+                }, index * 300);
+            });
+        });
+    </script>
+</body>
+</html>
